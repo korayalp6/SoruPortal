@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "AnswerSurvey";
+}
+
+@model AnketProje.Models.Survey
+
+<div class="container mt-5">
+    <h2>@ViewData["Title"]: @Model.Title</h2>
+    <form asp-action="SubmitSurveyAnswers"  method="post">
+        <input type="hidden" name="surveyId" value="@Model.Id" />
+        <h4>Sorular:</h4>
+        @foreach (var question in Model.Questions)
+        {
+            <div class="form-group">
+                <label>@question.Content</label>
+                <input type="text" name="answers[@question.Id]" class="form-control" />
+            </div>
+        }
+        <button type="submit" class="btn btn-primary">Anketi Gönder</button>
+    </form>
+</div>

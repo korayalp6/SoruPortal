@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "AddQuestion";
+}
+@model AnketProje.Models.Question
+
+<h1>AddQuestion</h1>
+
+<form asp-action="AddQuestion" method="post">
+    <input type="hidden" asp-for="SurveyId" value="@ViewBag.SurveyId" />
+
+    <div class="form-group">
+        <label asp-for="Content" class="control-label">Soru İçeriği:</label>
+        <input asp-for="Content" class="form-control" />
+        <span asp-validation-for="Content" class="text-danger"></span>
+    </div>
+
+    <!-- Diğer soru özellikleri eklenebilir -->
+
+    <button type="submit" class="btn btn-primary">Soruyu Ekle</button>
+</form>

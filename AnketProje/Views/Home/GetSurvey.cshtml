@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "Anket Listesi";
+}
+
+@model AnketProje.Models.Survey
+
+<div class="container mt-5">
+    @if (Model != null)
+    {
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">@Model.Title</h3>
+            </div>
+            <div class="card-body">
+                <p class="lead">@Model.Description</p>
+
+                @if (Model.Questions.Any())
+                {
+                    <h4 class="mt-4">Sorular:</h4>
+                    <ul class="list-group">
+                        @foreach (var question in Model.Questions)
+                        {
+                            <li class="list-group-item">@question.Content</li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p>Henüz soru eklenmemiş.</p>
+                }
+
+                <a class="btn btn-primary mt-3" href="@Url.Action("AddQuestion", "Home", new { surveyId = Model.Id })">Soru Ekle</a>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger mt-3" role="alert">
+            Anket bulunamadı.
+        </div>
+    }
+</div>

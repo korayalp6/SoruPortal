@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Anket Listesi";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center text-primary mb-4">@ViewData["Title"]</h2>
+    @if (ViewBag.SuccessMessage != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @ViewBag.SuccessMessage
+        </div>
+    }
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      
+        @foreach (var survey in Model)
+        {
+          
+            <div class="col">
+                <div class="card h-100 border-primary">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">@survey.Title</h5>
+                        <p class="card-text text-muted">@survey.Description</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <a href="@Url.Action("AnswerSurvey", "Home", new { id = survey.Id })" class="btn btn-primary">Ankete Cevap Ver</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
