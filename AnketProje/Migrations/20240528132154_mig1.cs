@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace AnketProje.Migrations
+namespace InternetProg2.Migrations
 {
     /// <inheritdoc />
     public partial class mig1 : Migration

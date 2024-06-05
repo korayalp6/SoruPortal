@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Anket Listesi";
+    ViewData["Title"] = "Soru Listesi";
 }
 
 <div class="container mt-5">
@@ -23,7 +23,7 @@
                         <p class="card-text text-muted">@survey.Description</p>
                     </div>
                     <div class="card-footer bg-transparent border-top-0">
-                        <a href="@Url.Action("AnswerSurvey", "Home", new { id = survey.Id })" class="btn btn-primary">Ankete Cevap Ver</a>
+                        <a href="@Url.Action("AnswerSurvey", "Home", new { id = survey.Id })" class="btn btn-primary">Soruya Cevap Ver</a>
                     </div>
                 </div>
             </div>

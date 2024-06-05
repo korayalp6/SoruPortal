@@ -1,4 +1,4 @@
-﻿namespace AnketProje.ViewModels
+﻿namespace InternetProg2.ViewModels
 {
     public class UserModel
     {

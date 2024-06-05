@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AnketProje.Models
+namespace InternetProg2.Models
 {
     public class Survey
     {

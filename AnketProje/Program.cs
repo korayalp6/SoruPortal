@@ -1,5 +1,5 @@
-using AnketProje.Localisation;
-using AnketProje.Models;
+using InternetProg2.Localisation;
+using InternetProg2.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Net;

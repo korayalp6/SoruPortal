@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace AnketProje.Localisation
+namespace InternetProg2.Localisation
 {
     public class ErrorDescription:IdentityErrorDescriber
     {

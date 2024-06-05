@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Identity.Client;
 
-namespace AnketProje.Models
+namespace InternetProg2.Models
 {
     public class AppUser : IdentityUser
     {

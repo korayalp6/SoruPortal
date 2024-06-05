@@ -3,7 +3,7 @@
     ViewData["Title"] = "AnswerSurvey";
 }
 
-@model AnketProje.Models.Survey
+@model InternetProg2.Models.Survey
 
 <div class="container mt-5">
     <h2>@ViewData["Title"]: @Model.Title</h2>
@@ -17,6 +17,6 @@
                 <input type="text" name="answers[@question.Id]" class="form-control" />
             </div>
         }
-        <button type="submit" class="btn btn-primary">Anketi Gönder</button>
+        <button type="submit" class="btn btn-primary">Cevabı Gönder</button>
     </form>
 </div>

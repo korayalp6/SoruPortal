@@ -11,10 +11,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - AnketProje</title>
+    <title>@ViewData["Title"] - InternetProg2</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/AnketProje.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/InternetProg2.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
@@ -41,7 +41,7 @@
                         {
                     
                             <li class="nav-item">
-                                <a class="nav-link text-dark"  asp-controller="Home" asp-action="GetSurveyAdmin">Anket Listesi</a>
+                                <a class="nav-link text-dark"  asp-controller="Home" asp-action="GetSurveyAdmin">Soru Listesi</a>
                             </li>
                            
                           
@@ -51,7 +51,7 @@
                         {
                             
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="ListSurveys" asp-controller="Home" asp-action="ListSurveys">Anket Listele</a>
+                                <a class="nav-link text-dark" asp-area="ListSurveys" asp-controller="Home" asp-action="ListSurveys">Soru Listele</a>
                             </li>
                             <form class="nav-item" id="logoutForm" asp-action="Logout" method="post">
                                 <button class="nav-link text-dark" style="background-color:white;border:none;" type="submit">Çıkış Yap</button>
@@ -94,7 +94,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - AnketProje - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - InternetProg2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

@@ -1,4 +1,4 @@
-﻿@model AnketProje.Models.Survey
+﻿@model InternetProg2.Models.Survey
 
 
 @{
@@ -9,7 +9,7 @@
 
 <form asp-action="AddSurvey"  method="post">
     <div class="form-group">
-        <label asp-for="Title" class="control-label">Anket Başlığı:</label>
+        <label asp-for="Title" class="control-label">Soru Başlığı:</label>
         <input asp-for="Title" class="form-control" />
         <span asp-validation-for="Title" class="text-danger"></span>
     </div>
@@ -20,7 +20,7 @@
         <span asp-validation-for="Description" class="text-danger"></span>
     </div>
 
-    <!-- Diğer anket özellikleri eklenabilir -->
+    
 
-    <button type="submit" class="btn btn-primary">Anketi Ekle</button>
+    <button type="submit" class="btn btn-primary">Soru Ekle</button>
 </form>

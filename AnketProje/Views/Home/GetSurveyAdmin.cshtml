@@ -3,9 +3,9 @@
     ViewData["Title"] = "GetSurveyAdmin";
 }
 
-@model List<AnketProje.Models.Survey>
+@model List<InternetProg2.Models.Survey>
 
-<h2>Tüm Anketler</h2>
+<h2>Tüm Sorular</h2>
 
 <table class="table">
     <thead>
@@ -33,7 +33,7 @@
 </table>
 
 <form id="addSurveyForm">
-    <h2>Anket Ekle</h2>
+    <h2>Soru Ekle</h2>
 
     <div class="form-group">
         <label for="title">Başlık</label>
@@ -45,7 +45,7 @@
         <input type="text" class="form-control" id="Description" name="Description" required>
     </div>
 
-    <button type="submit" style="margin-top:20px" class="btn btn-primary">Anketi Ekle</button>
+    <button type="submit" style="margin-top:20px" class="btn btn-primary">Soruyu Ekle</button>
 </form>
 
 
@@ -59,7 +59,7 @@
                 var formData = {
                     Title: $("#title").val(),
                     Description: $("#Description").val()
-                    // Diğer form alanları eklenebilir
+                   
                 };
 
                 $.ajax({
@@ -68,10 +68,10 @@
                     contentType: "application/json",
                     data: JSON.stringify(formData),
                     success: function (data) {
-                        // Başarılı bir şekilde cevap alındığında data ile bir şeyler yapabilirsiniz.
+                        
                         console.log(data);
 
-                        // Örneğin, kullanıcıyı başka bir sayfaya yönlendirme
+                        
                         window.location.href = data.redirectUrl;
                     },
                     error: function (error) {
@@ -80,8 +80,8 @@
                 });
             });
             $(".delete-survey").on("click", function () {
-                // Silme işlemi için bir onay alabilirsiniz
-                if (confirm("Bu anketi silmek istediğinize emin misiniz?")) {
+                
+                if (confirm("Bu soruyu silmek istediğinize emin misiniz?")) {
                     var surveyId = $(this).data("survey-id");
 
                     $.ajax({
@@ -89,10 +89,10 @@
                         type: "POST",
                         data: { id: surveyId },
                         success: function (data) {
-                            // Başarılı bir şekilde cevap alındığında data ile bir şeyler yapabilirsiniz.
+                            
                             console.log(data);
 
-                            // Örneğin, sayfayı yeniden yükleme
+                            
                             location.reload();
                         },
                         error: function (error) {

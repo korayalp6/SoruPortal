@@ -1,12 +1,12 @@
-﻿using AnketProje.Models;
-using AnketProje.ViewModels;
+﻿using InternetProg2.Models;
+using InternetProg2.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
-namespace AnketProje.Controllers
+namespace InternetProg2.Controllers
 {
     [Authorize]
     public class HomeController : Controller
@@ -44,7 +44,6 @@ namespace AnketProje.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginModel model)
         {
-
             var user = await _userManager.FindByNameAsync(model.UserName);
             if (user == null)
             {
@@ -190,7 +189,7 @@ namespace AnketProje.Controllers
         {
             if (survey == null)
             {
-                return BadRequest("Anket bilgileri eksik.");
+                return BadRequest("Soru bilgileri eksik.");
             }
 
             _context.Surveys.Add(survey);
@@ -223,21 +222,20 @@ namespace AnketProje.Controllers
 
             if (survey == null)
             {
-                return NotFound("Belirtilen ID'ye sahip anket bulunamadı.");
+                return NotFound("Belirtilen ID'ye sahip soru bulunamadı.");
             }
 
             return View(survey);
         }
         [HttpPost]
         [Authorize(Roles = "Admin")]
-
         public async Task<IActionResult> DeleteSurvey(int id)
         {
             var survey = await _context.Surveys.FindAsync(id);
 
             if (survey == null)
             {
-                return NotFound("Anket bulunamadı.");
+                return NotFound("Soru bulunamadı.");
             }
 
             
@@ -252,7 +250,6 @@ namespace AnketProje.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
-
         public IActionResult AddQuestion(int surveyId)
         {
             
@@ -307,7 +304,6 @@ namespace AnketProje.Controllers
 
         [HttpGet("{id}")]
         [AllowAnonymous]
-
         public async Task<IActionResult> AnswerSurvey(int id)
         {
             var survey = await _context.Surveys

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace AnketProje.Models
+namespace InternetProg2.Models
 {
     public class AppRole : IdentityRole
     {

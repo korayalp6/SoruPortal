@@ -1,4 +1,5 @@
-namespace AnketProje.Models
+namespace InternetProg2
+    .Models
 {
     public class ErrorViewModel
     {

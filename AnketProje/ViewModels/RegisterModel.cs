@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AnketProje.ViewModels
+namespace InternetProg2.ViewModels
 {
 
     public class RegisterModel

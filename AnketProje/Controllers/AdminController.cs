@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace AnketProje.Controllers
+namespace InternetProg2.Controllers
 {
     public class AdminController : Controller
     {
